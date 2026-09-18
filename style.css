@@ -390,3 +390,18 @@ span { /* Все теги <span> */
   display: flex; /* Переопределяем grid на flex */
   flex-direction: column; /* Всегда колонка */
 }
+
+.practice button:disabled {
+    background: gray;
+    border: 1px solid gray;
+    cursor: auto;
+}
+
+.practice button:disabled:hover {
+    background: gray;
+    border: 1px solid gray;
+}
+
+video {
+    background: #000;
+}

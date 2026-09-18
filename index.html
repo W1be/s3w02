@@ -1,108 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <script src="./index.js" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>S3W03 — JavaScript</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script src="capture.js" defer></script>
+    <!-- Подключаем скрипты один раз -->
+    <script src="./index.js" defer></script>
+    <script src="./capture.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
-        <div class="header"> 
-             <img src="./assets/logo.png" alt="logo" class="logo">
-                <nav>
-                    <a href="#practice">practice</a>
-                    <a href="#about">about </a>
-                    <a href="#skills">skills</a>
-                    <a href="#portofolio">portofolio</a>
-                     <a href="#contacts">contacts</a>
-                </nav>
-       </div>
-            <div class="practice" id="practice" >
-                <div class="block camera">
-                    <h2>Camera</h2>
-                <input
-                    type="range"
-                    id="range_width"
-                    min="100"
-                    max="1000"
-                    step="100"
-                    value="320"
-                />
-                <label for="range_width">width</label> 
+        <div class="header">
+            <img src="./assets/logo.png" alt="logo" class="logo">
+            <nav>
+                <a href="#practice">practice</a>
+                <a href="#about">about</a>
+                <a href="#skills">skills</a>
+                <a href="#portfolio">portfolio</a>
+                <a href="#contacts">contacts</a>
+            </nav>
+        </div>
 
-            <input
-                    type="range"
-                    id="range_brightness"
-                    min="100"
-                    max="1000"
-                    step="100"
-                    value="320"
-                />
+        <!-- ==================== PRACTICE ==================== -->
+        <div class="practice" id="practice">
+            <h1 class="title" id="titleName">Practice</h1>
+
+            <!-- ---------- Блок Camera (п.12–24 методички) ---------- -->
+            <div class="block camera">
+                <h2>Camera</h2>
+
+                <input type="range" id="range_width"    min="100" max="1000" step="100" value="320" />
+                <label for="range_width">width</label>
+
+                <input type="range" id="range_brightness" min="0" max="200" step="1" value="100" />
                 <label for="range_brightness">brightness</label>
 
-        <input
-                    type="range"
-                    id="range_opacity"
-                    min="100"
-                    max="1000"
-                    step="100"
-                    value="320"
-                />
-                <label for="range_opacity">opacity</label>  
-    <input
-                    type="range"
-                    id="range_contrast"
-                    min="100"
-                    max="1000"
-                    step="100"
-                    value="320"
-                />
-                <label for="range_width">contrast</label> 
-<input
-                    type="range"
-                    id="range_saturate"
-                    min="100"
-                    max="1000"
-                    step="100"
-                    value="320"
-                />
-                <label for="range_saturate">saturate</label> 
+                <input type="range" id="range_opacity"   min="0" max="100" step="1" value="100" />
+                <label for="range_opacity">opacity</label>
 
-<video id="video">Video stream not available.</video>
-<button id="startbutton">Take photo</button>
-<canvas id="canvas" class="output"> </canvas>
+                <input type="range" id="range_contrast"  min="0" max="200" step="1" value="100" />
+                <label for="range_contrast">contrast</label>
 
+                <input type="range" id="range_saturate"  min="0" max="200" step="1" value="100" />
+                <label for="range_saturate">saturate</label>
 
-                </div>
-                <h1 class="title">Practice</h1>
-                    <div class="block titles"> 
-                    <h2>Заголовки</h2>
-                    </div> 
+                <video id="video"></video>
+                <button id="startbutton" type="button">Take photo</button>
+                <canvas id="canvas" class="output"></canvas>
+            </div>
 
-        
-                        <p>Заголовки на сайте могут быть разных уровней, начиная от заголовка первого уровня (H1) и заканчивая заголовками шестого уровня (H6). Использование заголовков является семантически верным, так как позволяет структурировать содержимое страницы и указать  наиболее важные разделы.</p> 
-                        <p>Браузеры и поисковые системы используют семантическую верстку для более эффективного индексирования страниц и повышения их релевантности для пользователей. Кроме того, использование заголовков упрощает доступ к информации для людей с ограниченными возможностями, таких как слабовидящие или незрячие пользователи, которые могут использовать программы чтения экрана для навигации по сайту.</p>
+            <!-- ---------- Заголовки ---------- -->
+            <div class="block titles">
+                <h2>Заголовки</h2>
+            </div>
+            <p>Заголовки на сайте могут быть разных уровней, начиная от заголовка первого уровня (H1) и заканчивая заголовками шестого уровня (H6). Использование заголовков является семантически верным, так как позволяет структурировать содержимое страницы и указать наиболее важные разделы.</p>
+            <p>Браузеры и поисковые системы используют семантическую верстку для более эффективного индексирования страниц и повышения их релевантности для пользователей. Кроме того, использование заголовков упрощает доступ к информации для людей с ограниченными возможностями, таких как слабовидящие или незрячие пользователи, которые могут использовать программы чтения экрана для навигации по сайту.</p>
 
-                        <div class="kindsOfTitles">
-                            <h1>Заголовок первого уровня</h1>
-                            <h2>Заголовок второго уровня</h2>
-                            <h3>Заголовок третьего уровня</h3>
-                            <h4>Заголовок четвертого уровня</h4>
-                            <h5>Заголовок пятого уровня</h5>
-                            <h6>Заголовок шестого уровня</h6>
-                        </div>
-   
+            <div class="kindsOfTitles">
+                <h1>Заголовок первого уровня</h1>
+                <h2>Заголовок второго уровня</h2>
+                <h3>Заголовок третьего уровня</h3>
+                <h4>Заголовок четвертого уровня</h4>
+                <h5>Заголовок пятого уровня</h5>
+                <h6>Заголовок шестого уровня</h6>
+            </div>
+
+            <!-- ---------- Списки ---------- -->
             <div class="block lists">
                 <h2>Списки</h2>
-                <p>Каждый элемент списка создается с помощью тега <span>li</span>.
-    Теги <span>ol</span> (Ordered List, упорядоченный, нумерованный
-    список), <span>ul</span> (Unordered List, неупорядоченный,
-    маркированный список) и <span>dl</span> (Description List, Список
-    описаний) используются для создания основных типов списков. Каждый элемент     
-    списка создается с помощью тега <span>li</span>. </p>
+                <p>Каждый элемент списка создается с помощью тега <span>li</span>. Теги <span>ol</span> (Ordered List, упорядоченный, нумерованный список), <span>ul</span> (Unordered List, неупорядоченный, маркированный список) и <span>dl</span> (Description List, Список описаний) используются для создания основных типов списков.</p>
 
                 <ul class="list">
                     Маркированный список
@@ -110,145 +77,122 @@
                     <li>Список внутри списка
                         <ul>
                             <li>Подпункт 1</li>
-                             <li>Подпункт 2</li>
+                            <li>Подпункт 2</li>
                         </ul>
                     </li>
                     <li>Пункт 3</li>
                 </ul>
 
-                 <ol class="list">
+                <ol class="list">
                     Нумерованный список
                     <li>Пункт 1</li>
-                    <li>Пункт 2</li>
+                    <li>Пункт 2
                         <ul>
                             <li>Подпункт 1</li>
                             <li>Подпункт 2</li>
                         </ul>
-                    <li>Пункт 3</li>
+                    </li>
+                    <li>Пункт 3
                         <ol>
                             <li>Подпункт 1</li>
                             <li>Подпункт 2</li>
                         </ol>
+                    </li>
                 </ol>
-            </div> 
- 
-<div class="block tables">
-    <h2>Таблицы</h2>
-        <p>В HTML таблицы создаются с помощью тега <span>table</span>. Внутри тега <span>table</span> располагаются строки таблицы, которые создаются с помощью тега <span>tr</span>. Внутри каждой строки располагаются ячейки таблицы, которые создаются с помощью тега <span>td</span>. Также можно использовать теги <span>th</span> для создания заголовков таблицы. Заголовки могут располагаться как в первой строке таблицы, так и над таблицей, в этом случае используется тег <span>caption</span>.</p>
-            <table>
-                <tr>
-                    <th>Студент</th>
-                    <th>Группа</th>
-                    <th>Предмет</th>
-                </tr>
-            <tr>
-                <td>Сидоров Сидр</td>
-                <td>ИКПИ-05</td>
-                <td>WEB-технологии</td>
-            </tr>
-        <tr>
-            <td>Мишарев Писа</td>
-            <td>ИКТС-12</td>
-            <td>Квантовые приборы</td>
-        </tr>
-            </table>
-</div> 
-
-
-<div class="block pics">
-    <h2>Изображения</h2>
-        <p>В HTML можно создавать картинки с помощью тега <span>img</span>. Этот тег имеет атрибут <span>src</span>, который указывает путь к изображению. Атрибут <span>alt</span> задает текст, который будет отображаться вместо картинки, если она не загрузится или пользователь использует программу чтения экрана.</p>
-    <div class="pic">
-        <img src="./assets/image.png" alt="ъыъ.рф/ЪАье" />
-    </div>
-</div>
-
-<div class="block links">
-    <h2>Ссылки</h2>
-        <p>В HTML ссылки создаются с помощью тега <span>a</span>. Чтобы создать ссылку, нужно
-указать атрибут <span>href</span>, который содержит адрес страницы, на которую должна вести ссылка. Также можно добавлять атрибут <span>target</span>, чтобы указать, как должна быть открыта страница, на которую ведет ссылка. <span>target="_blank"</span> откроет ссылку в новой вкладке.</p>
-            <a href="http://ъыъ.рф/ЪАье" target="_blank">Ссылка на методичку</a>
-</div>
-
-
-<div class="block forms">
-    <h2>Формы</h2>
-    <form action="">
-        <input type="text" name="text" placeholder="Любой текст" />
-        <input type="number" name="number" placeholder="Только числа" />
-        <input type="tel" name="phone" placeholder="Номер телефона" />
-        <input type="email" name="email" placeholder="Почта" />
-
-        <input type="password" name="password" id="passwordField" placeholder="Пароль" />
-        
-        <input type="checkbox" id="showPassword" />
-        <label for="showPassword">Показать пароль🔑</label>
-
-        <input type="color" placeholder="Цвет" />
-        <input type="range" placeholder="" />
-        <input type="date" placeholder="" />
-        <input type="datetime-local" placeholder="" />
-        <input type="checkbox" placeholder="" />
-
-        <div class="radioblock">
-            <div class="answers">
-                <input type="radio" name="gender" id="male" value="male" />
-                <label for="male">Мужской</label>
             </div>
-            <div class="answers">
-                <input type="radio" name="gender" id="female" value="female" />
-                <label for="female">Женский</label>
+
+            <!-- ---------- Таблицы ---------- -->
+            <div class="block tables">
+                <h2>Таблицы</h2>
+                <p>В HTML таблицы создаются с помощью тега <span>table</span>. Внутри тега <span>table</span> располагаются строки таблицы, которые создаются с помощью тега <span>tr</span>. Внутри каждой строки располагаются ячейки таблицы, которые создаются с помощью тега <span>td</span>.</p>
+                <table>
+                    <tr>
+                        <th>Студент</th>
+                        <th>Группа</th>
+                        <th>Предмет</th>
+                    </tr>
+                    <tr>
+                        <td>Сидоров Сидр</td>
+                        <td>ИКПИ-05</td>
+                        <td>WEB-технологии</td>
+                    </tr>
+                    <tr>
+                        <td>Мишарев Писа</td>
+                        <td>ИКТС-12</td>
+                        <td>Квантовые приборы</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- ---------- Изображения ---------- -->
+            <div class="block pics">
+                <h2>Изображения</h2>
+                <p>В HTML можно создавать картинки с помощью тега <span>img</span>. Этот тег имеет атрибут <span>src</span>, который указывает путь к изображению.</p>
+                <div class="pic">
+                    <img src="./assets/image.png" alt="ъыъ.рф/ЪАье" />
+                </div>
+            </div>
+
+            <!-- ---------- Ссылки ---------- -->
+            <div class="block links">
+                <h2>Ссылки</h2>
+                <p>В HTML ссылки создаются с помощью тега <span>a</span>. Чтобы создать ссылку, нужно указать атрибут <span>href</span>.</p>
+                <a href="http://ъыъ.рф/ЪАье" target="_blank">Ссылка на методичку</a>
+            </div>
+
+            <!-- ---------- Форма (валидация S3W03) ---------- -->
+            <div class="block forms">
+                <h2>Формы</h2>
+                <form action="thanks.html" method="get" id="practiceForm">
+                    <input name="text"     type="text"     id="text"     placeholder="Любой текст" />
+                    <input name="number"   type="number"   id="number"   placeholder="Только числа" />
+                    <input name="phone"    type="tel"      id="phone"    placeholder="Номер телефона" />
+                    <input name="email"    type="email"    id="email"    placeholder="Почта" />
+                    <input name="password" type="password" id="password" placeholder="Пароль" />
+
+                    <!-- Чекбокс «Показать пароль» (п.9 методички) -->
+                    <input type="checkbox" id="showPassword" name="showPassword" />
+                    <label for="showPassword">Показать пароль 🔑</label>
+
+                    <!-- Единственная кнопка «Отправить» (п.3 методички) -->
+                    <button type="submit" id="formSubmitBtn" disabled="true">Отправить</button>
+                </form>
             </div>
         </div>
 
-        <button type="submit">Отправить</button>
-    </form>
-</div>
-        
-
-       
-    <div class="about" id="about"><h1 class="title">Немного обо мне</h1>
-        <div class="info" >
-            <div class="infoAboutMe">
-                <div class="myname">
-                    <h3>Я Кабин Михаил, студент группы ИКТС-32</h3>
-                </div>
-                    <p>I'm singing a song. Еще раз I'm singing a song. </p>
-                    <p> Чё-то Г проскочила. Singing a... Вот это вот. </p>
+        <!-- ==================== ABOUT ==================== -->
+        <div class="about" id="about">
+            <h1 class="title">Немного обо мне</h1>
+            <div class="info">
+                <div class="infoAboutMe">
+                    <div class="myname">
+                        <h3>Я Кабин Михаил, студент группы ИКТС-32</h3>
+                    </div>
+                    <p>I'm singing a song. Еще раз I'm singing a song.</p>
+                    <p>Чё-то Г проскочила. Singing a... Вот это вот.</p>
                     <p>У вас Г проскачивает... проска... просказывает.</p>
                     <p>Singing a... aaaa. Вот там операция вся.</p>
                     <p>Противненько так няняняня вот это как будто кошку давят. Singing a...</p>
-                    
-                <img src="./assets/i.webp" alt="my photo" class="myphoto" />
-        </div> 
-    </div>
- 
-    <div class="practice" id="practice">
-        <div class="skills"id="skills">
-            <h1 class="title">Skills</h1>
-                <p> профессионально фотографирую бабок с огурцами во рту </p>
-        </div>
-            <div class="portofolio" id="portfolio">
-                <h1 class="title">Portfolio</h1>
-                    <img src="./assets/de076592619d6617e1ec2d4d4514766d.jpg" >
-            </div>
-                <div class="contacts"id="contacts">
-                    <h1 class="title">Contacts</h1>
-                        <p>email: kabinmikhail@mail.ru</p>
+                    <img src="./assets/i.webp" alt="my photo" class="myphoto" />
                 </div>
-    </div>
-    </div>  
-    <script>
-    const passwordInput = document.getElementById('passwordField');
-    const toggleCheckbox = document.getElementById('showPassword');
+            </div>
+        </div>
 
-    toggleCheckbox.addEventListener('change', function() {
-        if (this.checked) {
-            passwordInput.type = 'text';
-        } else {
-            passwordInput.type = 'password';
-        }
-    });
-    </script>
+        <!-- ==================== SKILLS / PORTFOLIO / CONTACTS ==================== -->
+        <div class="skills" id="skills">
+            <h1 class="title">Skills</h1>
+            <p>Профессионально фотографирую бабок с огурцами во рту</p>
+        </div>
+
+        <div class="portfolio" id="portfolio">
+            <h1 class="title">Portfolio</h1>
+            <img src="./assets/de076592619d6617e1ec2d4d4514766d.jpg" alt="portfolio" width="300">
+        </div>
+
+        <div class="contacts" id="contacts">
+            <h1 class="title">Contacts</h1>
+            <p>email: kabinmikhail@mail.ru</p>
+        </div>
+    </div>
 </body>
 </html>
