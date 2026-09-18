@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S3W03 — JavaScript</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <!-- Подключаем скрипты один раз -->
     <script src="./index.js" defer></script>
     <script src="./capture.js" defer></script>
 </head>
@@ -22,11 +21,9 @@
             </nav>
         </div>
 
-        <!-- ==================== PRACTICE ==================== -->
         <div class="practice" id="practice">
             <h1 class="title" id="titleName">Practice</h1>
 
-            <!-- ---------- Блок Camera (п.12–24 методички) ---------- -->
             <div class="block camera">
                 <h2>Camera</h2>
 
@@ -50,7 +47,6 @@
                 <canvas id="canvas" class="output"></canvas>
             </div>
 
-            <!-- ---------- Заголовки ---------- -->
             <div class="block titles">
                 <h2>Заголовки</h2>
             </div>
@@ -66,7 +62,6 @@
                 <h6>Заголовок шестого уровня</h6>
             </div>
 
-            <!-- ---------- Списки ---------- -->
             <div class="block lists">
                 <h2>Списки</h2>
                 <p>Каждый элемент списка создается с помощью тега <span>li</span>. Теги <span>ol</span> (Ordered List, упорядоченный, нумерованный список), <span>ul</span> (Unordered List, неупорядоченный, маркированный список) и <span>dl</span> (Description List, Список описаний) используются для создания основных типов списков.</p>
@@ -101,7 +96,6 @@
                 </ol>
             </div>
 
-            <!-- ---------- Таблицы ---------- -->
             <div class="block tables">
                 <h2>Таблицы</h2>
                 <p>В HTML таблицы создаются с помощью тега <span>table</span>. Внутри тега <span>table</span> располагаются строки таблицы, которые создаются с помощью тега <span>tr</span>. Внутри каждой строки располагаются ячейки таблицы, которые создаются с помощью тега <span>td</span>.</p>
@@ -124,7 +118,6 @@
                 </table>
             </div>
 
-            <!-- ---------- Изображения ---------- -->
             <div class="block pics">
                 <h2>Изображения</h2>
                 <p>В HTML можно создавать картинки с помощью тега <span>img</span>. Этот тег имеет атрибут <span>src</span>, который указывает путь к изображению.</p>
@@ -133,14 +126,12 @@
                 </div>
             </div>
 
-            <!-- ---------- Ссылки ---------- -->
             <div class="block links">
                 <h2>Ссылки</h2>
                 <p>В HTML ссылки создаются с помощью тега <span>a</span>. Чтобы создать ссылку, нужно указать атрибут <span>href</span>.</p>
                 <a href="http://ъыъ.рф/ЪАье" target="_blank">Ссылка на методичку</a>
             </div>
 
-            <!-- ---------- Форма (валидация S3W03) ---------- -->
             <div class="block forms">
                 <h2>Формы</h2>
                 <form action="thanks.html" method="get" id="practiceForm">
@@ -150,17 +141,14 @@
                     <input name="email"    type="email"    id="email"    placeholder="Почта" />
                     <input name="password" type="password" id="password" placeholder="Пароль" />
 
-                    <!-- Чекбокс «Показать пароль» (п.9 методички) -->
                     <input type="checkbox" id="showPassword" name="showPassword" />
                     <label for="showPassword">Показать пароль 🔑</label>
 
-                    <!-- Единственная кнопка «Отправить» (п.3 методички) -->
                     <button type="submit" id="formSubmitBtn" disabled="true">Отправить</button>
                 </form>
             </div>
         </div>
 
-        <!-- ==================== ABOUT ==================== -->
         <div class="about" id="about">
             <h1 class="title">Немного обо мне</h1>
             <div class="info">
@@ -177,8 +165,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- ==================== SKILLS / PORTFOLIO / CONTACTS ==================== -->
         <div class="skills" id="skills">
             <h1 class="title">Skills</h1>
             <p>Профессионально фотографирую бабок с огурцами во рту</p>

@@ -405,3 +405,96 @@ span { /* Все теги <span> */
 video {
     background: #000;
 }
+
+/* =========================================================
+   Страница "Спасибо за заполнение формы" (thanks.html)
+   ========================================================= */
+
+.thanks {
+    background: #fff;
+    border-radius: 12px;
+    padding: 60px 40px;
+    margin: 40px auto;
+    max-width: 640px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Иконка-галочка сверху */
+.thanks-icon {
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: pop 0.5s ease;
+}
+
+/* Заголовок */
+.thanks .title {
+    font-size: 2rem;
+    color: #4468c4;
+    margin: 0 0 15px;
+}
+
+/* Основной текст */
+.thanks p {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Блок с дополнительной информацией */
+.thanks-info {
+    text-align: left;
+    background: #f5f7ff;
+    border-left: 4px solid #4468c4;
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin: 30px 0;
+}
+
+.thanks-info p {
+    margin: 0 0 10px;
+    color: #4468c4;
+}
+
+.thanks-info ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.thanks-info li {
+    margin: 6px 0;
+    color: #333;
+}
+
+/* Кнопка возврата */
+.thanks-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #4468c4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.thanks-btn:hover {
+    background: #2f4a91;
+    transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    0%   { transform: scale(0.3); opacity: 0; }
+    70%  { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
+}
